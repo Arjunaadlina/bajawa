@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, ImageSourcePropType } from "react-native";
+import { View, Image, ImageSourcePropType, TouchableOpacity } from "react-native";
 import { QuickSand } from "../Text/QuickSand";
 
 interface LearningCardProps {
@@ -20,7 +20,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
     imageSrc,
     }) => {
     return (
-        <View className="bg-white h-[9%] rounded-[2rem] items-center px-4 flex-row gap-4 mb-4">
+        <TouchableOpacity className="bg-white h-[9%] rounded-[2rem] items-center px-4 flex-row gap-4 mb-4">
             <View className={`${bgColor} h-24 w-24 rounded-xl justify-center items-center`}>
                 <Image source={imageSrc} />
             </View>
@@ -31,7 +31,7 @@ const LearningCard: React.FC<LearningCardProps> = ({
                 </View>
                 <QuickSand className="text-gray-500 mt-4 font-semibold">{description}</QuickSand>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 

@@ -16,7 +16,7 @@ export default function Home() {
                         style={{ width: 100, height: 100 }}
                     />
                     <View className='justify-center '>
-                        <QuickSand weight='semibold' className='text-white text-[1.6rem]'>Hi, Michaela 👋</QuickSand>
+                        <QuickSand weight='semibold' className='text-white text-[1.6rem]'>Hi, Arjuna Adlina 👋</QuickSand>
                         <QuickSand className='text-white text-sm' >Ayo mulai belajar!</QuickSand>
                     </View>
                 </View>
