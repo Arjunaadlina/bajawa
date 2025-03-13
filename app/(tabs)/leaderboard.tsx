@@ -14,7 +14,6 @@ export default function Leaderboard() {
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
-    // Simulate fetching leaderboard data
     const mockData: LeaderboardUser[] = [
       { id: '1', name: 'Alex Johnson', score: 9842, rank: 1, avatar: 'https://via.placeholder.com/150' },
       { id: '2', name: 'Sarah Williams', score: 8721, rank: 2, avatar: 'https://via.placeholder.com/150' },

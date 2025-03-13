@@ -2,6 +2,7 @@ import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { useAuth } from '../../context/auth';
 import { QuickSand } from '@/components/Text/QuickSand';
 import LearningCard from '@/components/Card/LearningCard';
+import ScoreCard from '@/components/Card/ScoreCard';
 
 export default function Home() {
     const { logout } = useAuth();
@@ -17,13 +18,22 @@ export default function Home() {
                     />
                     <View className='justify-center '>
                         <QuickSand weight='semibold' className='text-white text-[1.6rem]'>Hi, Arjuna Adlina 👋</QuickSand>
-                        <QuickSand className='text-white text-sm' >Ayo mulai belajar!</QuickSand>
+                        <QuickSand className='text-white text-md' >Ayo mulai belajar!</QuickSand>
                     </View>
                 </View>
 
                 <View className='flex-row justify-between mt-8 w-full ' >
-                    <View className='bg-white rounded-lg' style={{width: 160, height:65}}/>
-                    <View className='bg-white rounded-lg' style={{width: 160, height:65}}/>
+                    <ScoreCard 
+                        score={1200} 
+                        label="Skor kamu" 
+                        imageSource={require('../../assets/images/star.png')} 
+                    />
+                    <ScoreCard 
+                        score={10} 
+                        label="Pelajaran" 
+                        imageSource={require('../../assets/images/badge.png')} 
+                    />
+
                 </View>
             </View>
 
