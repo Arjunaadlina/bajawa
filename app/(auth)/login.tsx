@@ -37,13 +37,13 @@ export default function Login() {
                     keyboardShouldPersistTaps="handled"
                     showsVerticalScrollIndicator={false}
                 >
-                    <View className="flex-1 items-center justify-end">
-                        <View className="w-full xl:w-1/3 md:w-1/3 p-6 bg-white">
-                            <View className='items-center justify-center  mb-16'>
+                    <View className="flex-1 items-center  ">
+                        <View className="w-full xl:w-1/3 md:w-1/3 p-6 bg-white  flex-1 justify-end">
+                            <View className='items-center mb-16 pb-12'>
                                 <Image 
                                 source={require('../../assets/images/bajawa.png')} 
                                 style={{ width: 255, height: 150 }} 
-                                resizeMode='cover' 
+                                resizeMode='cover'
                                 />
                             </View>
 
