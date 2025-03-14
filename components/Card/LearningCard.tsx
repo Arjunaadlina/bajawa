@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "expo-router";
 import { View, Image, ImageSourcePropType, TouchableOpacity } from "react-native";
 import { QuickSand } from "../Text/QuickSand";
 
@@ -20,18 +20,20 @@ const LearningCard: React.FC<LearningCardProps> = ({
     imageSrc,
     }) => {
     return (
-        <TouchableOpacity className="bg-white h-[9%] rounded-[2rem] items-center px-4 flex-row gap-4 mb-4">
-            <View className={`${bgColor} h-24 w-24 rounded-xl justify-center items-center`}>
-                <Image source={imageSrc} />
-            </View>
-            <View>
-                <QuickSand weight="bold" className="text-xl">{title}</QuickSand>
-                <View className={`${colorProggress} p-[0.2rem] rounded-lg self-start`}>
-                    <QuickSand className="text-xs">{progressText}</QuickSand>
-                </View>
-                <QuickSand className="text-gray-500 mt-4 font-semibold">{description}</QuickSand>
-            </View>
-        </TouchableOpacity>
+        <Link href={{ pathname: "/learning/detail", params: { title } }}  asChild>
+            <TouchableOpacity className="bg-white h-[9%] rounded-[2rem] items-center px-4 flex-row gap-4 mb-4">
+                    <View className={`${bgColor} h-24 w-24 rounded-xl justify-center items-center`}>
+                        <Image source={imageSrc} />
+                    </View>
+                    <View>
+                        <QuickSand weight="bold" className="text-xl">{title}</QuickSand>
+                        <View className={`${colorProggress} p-[0.2rem] rounded-lg self-start`}>
+                            <QuickSand className="text-xs">{progressText}</QuickSand>
+                        </View>
+                        <QuickSand className="text-gray-500 mt-4 font-semibold">{description}</QuickSand>
+                    </View>
+            </TouchableOpacity>
+        </Link>
     );
 };
 
